@@ -1,0 +1,70 @@
+###
+
+POST  http://localhost:3000/dashboard/product HTTP/1.1
+Content-Type: application/json
+
+{
+    "product":"Lenovo ideapad" ,
+    "img":"https://www.shutterstock.com/es/image-photo/woman-hands-holding-smartphone-blank-screen-1906441567",
+    "price": 1600000,
+    "cant": 10,
+    "state": false
+}
+
+###
+GET http://localhost:3000/dashboard/products HTTP/1.1
+
+###
+GET http://localhost:3000/dashboard/products/62126fa8a9039911ec592a47 HTTP/1.1
+
+###
+DELETE  http://localhost:3000/dashboard/products/6213bdb7c1ec792e9c81559b HTTP/1.1
+
+###
+PUT http://localhost:3000/dashboard/products/6213bdb7c1ec792e9c81559b HTTP/1.1
+Content-Type: application/json
+
+{
+    "product": "Nokia 1100"
+}
+###
+
+POST  http://localhost:3000/dashboard/client HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"Manuela" ,
+    "lastname":"Soto",
+    "count_bank": "11111",
+    "address": {
+        "city": "Manizales",
+        "code_zip": 17000,
+        "lat": -200,
+        "len": 100
+    }
+}
+
+###
+GET http://localhost:3000/dashboard/clients HTTP/1.1
+
+###
+GET http://localhost:3000/dashboard/clients/62126fa8a9039911ec592a47 HTTP/1.1
+
+###
+DELETE  http://localhost:3000/dashboard/clients/6213ebdb1437f9560ff48b5c HTTP/1.1
+
+###
+PUT http://localhost:3000/dashboard/clients/6213ebdb1437f9560ff48b5c HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"James" ,
+    "lastname":"Almeida",
+    "count_bank": "222222",
+    "address": {
+        "city": "Medellin",
+        "code_zip": 16000,
+        "lat": -400,
+        "len": 180
+    }
+}
